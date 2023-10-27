@@ -93,6 +93,7 @@ public class DynQueue<T> implements GenQueue<T> {
             arrRear = 0;
         }
 
+        // Queue mode //
         if (isArrayMode) {
             if (isEmpty()) {
                 arr[arrRear] = x;
@@ -107,6 +108,7 @@ public class DynQueue<T> implements GenQueue<T> {
                 arr[arrRear] = x;
             }
         }
+        // Queue mode //
 
         // LinkedList Mode /////
         if (!isArrayMode) {
