@@ -2,7 +2,7 @@ DynQueue(int mi) {
          maxArrItems = mi;
          arr = (T[])new Object[maxArrItems];
      }
- 
+      // Displays array contents for visualization
      public void vis(){
          if(isArrayMode){
              System.out.println("\nArray Items:");
