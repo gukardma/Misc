@@ -1,8 +1,3 @@
-DynQueue(int mi) {
-         maxArrItems = mi;
-         arr = (T[])new Object[maxArrItems];
-     }
-
      // TODO: Implement enqueue with array and linked list as specified
      /**
       * Add an item to the queue
