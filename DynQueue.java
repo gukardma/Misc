@@ -2,30 +2,13 @@ DynQueue(int mi) {
          maxArrItems = mi;
          arr = (T[])new Object[maxArrItems];
      }
-      // Displays array contents for visualization
-     public void vis(){
-         if(isArrayMode){
-             System.out.println("\nArray Items:");
-             for(int i = 0; i < maxArrItems; i++)
-                 System.out.println(arr[i]);
-         } else {
-             System.out.println("\nLink Items:");
-             Node p = linkFront;
-             while(p != null){
-                 System.out.println(p.item);
-                 p = p.next;
-             }
-         }
-     }
- 
+
      // TODO: Implement enqueue with array and linked list as specified
      /**
       * Add an item to the queue
       * @param x Item to add to the queue
       */
      public void enqueue(T x) {
-         // System.out.println("\nAdding Item: " + x);
- 
          if(arrItems == maxArrItems){
              isArrayMode = false;
  
@@ -65,7 +48,6 @@ DynQueue(int mi) {
              linkRear.next = new Node(x, null);
              linkRear = linkRear.next;
          }
-         vis();
     }
  
  
@@ -79,18 +61,15 @@ DynQueue(int mi) {
          T item;
          if(isArrayMode){
              item = look();
-             // System.out.println("removing: " + item);
              arr[arrFront] = null;
              arrFront ++;
              arrItems --;
          } else {
              item = linkFront.item;
-             // System.out.println("removing: " + item);
              linkFront = linkFront.next;
              if (linkFront == null)
                  linkRear = null;
          }
-         vis();
          return item;
      }
  
