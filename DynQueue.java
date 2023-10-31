@@ -11,12 +11,17 @@
          if(arrItems == maxArrItems){
              isArrayMode = false;
  
-             //transfers queue variables to linked list
+             // transfers queue variables to linked list. Keeps running as long as there are
+             // items in the arr. (lots of room for improvement as it dosent take into account
+             // the array being circular and the need for the pointer to loop back to front once reaching end 
              while(arrItems != 0){
                  if(isEmpty()) {
+                      //CS2 LinkedList code: Creates a new node and sets is to front
+                      //This only runs for the first item in the linked list
                      linkFront = new Node(arr[arrFront], null);
                      linkRear = linkFront;
                  } else {
+                      //For the rest of the items being transfered from Arr to LL.
                      linkRear.next = new Node(arr[arrFront], null);
                      linkRear = linkRear.next;
                  }
@@ -28,11 +33,12 @@
              arrFront = 0;
              arrRear = 0;
          }
- 
+         // Queue code for when its in array mode
          if(isArrayMode){
              if(isEmpty()) {
                  arr[arrRear] = x;
                  arrItems++;
+               // Loops pointer back to front once reaching the end (could be written better)
              } else if((arrRear + 1) == maxArrItems) {
                  arrRear = 0;
                  arr[arrRear] = x;
