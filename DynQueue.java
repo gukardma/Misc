@@ -1,4 +1,7 @@
-     // TODO: Implement enqueue with array and linked list as specified
+
+////////// THERE ARE MULTIPLE WAYS TO DO THIS, THIS IS JUST ONE EXAMPLE (THAT ISIN'T PERFECT TBH) //////////
+
+// TODO: Implement enqueue with array and linked list as specified
      /**
       * Add an item to the queue
       * @param x Item to add to the queue
