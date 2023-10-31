@@ -1,5 +1,6 @@
 
 ////////// THERE ARE MULTIPLE WAYS TO DO THIS, THIS IS JUST ONE EXAMPLE (THAT ISIN'T PERFECT TBH) //////////
+////////// THIS USES LINKED LIST AND LINKED QUEUE FROM CS2 //////////
 
 // TODO: Implement enqueue with array and linked list as specified
      /**
