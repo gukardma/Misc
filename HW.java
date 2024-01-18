@@ -1,4 +1,4 @@
-public class HW<T> implements GenQueue<T> {
+public class DynQueue<T> implements GenQueue<T> {
 
     // Note: Most or all member variables should be private. They are public
     // for testing purposes only, so that class internals can be inspected.
@@ -56,7 +56,7 @@ public class HW<T> implements GenQueue<T> {
      * 
      * @param mi Maximum number of items for array mode
      */
-    HW(int mi) {
+    DynQueue(int mi) {
         maxArrItems = mi;
         arr = (T[]) new Object[maxArrItems];
     }
